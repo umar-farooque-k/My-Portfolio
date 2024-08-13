@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Avatar Guide -->
+    <div id="avatar">
+        <img src="/images/avatar.png" alt="Avatar" id="avatar-img">
+        <div id="avatar-text">Welcome to my portfolio! Let's explore together.</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <!-- Sections -->
+    <section id="home">
+        <div class="typing-container">
+            <span class="typing-line1"></span>
+            <span class="typing-line2"></span>
+            <span class="typing-cursor"></span>
+        </div>        
+    </section>
+
+<section id="about">
+    <h2 class="bg-color">About Me</h2>
+    <p>Hi, I'm a Computer Science student with a passion for technology and innovation. I specialize in web development, creating responsive and dynamic websites that provide great user experiences. Additionally, I have knowledge of AI tools, which I enjoy exploring to enhance my projects and learn about the cutting-edge technologies shaping our world.</p>
+    <p>I'm always eager to learn new things and collaborate on exciting projects. Let's connect!</p>
+    <div id="social-links">
+        <a href="https://instagram.com/_umarfarooquekhan_" target="_blank">
+            <img src="/images/instagram.png" alt="Instagram" class="social-logo">
+        </a>
+        <a href="https://github.com/umar-farooque-k" target="_blank">
+            <img src="/images/github.png" alt="GitHub" class="social-logo">
+        </a>
+        <a href="mailto:umarfk55@gmail.com">
+            <img src="/images/gmail.png" alt="Email" class="social-logo">
+        </a>
+    </div>
+</section>
+
+
+    <section id="projects">
+        <h2 class="bg-color">My Projects</h2>
+    
+        <!-- Project 1: Amazon Clone -->
+        <div class="project">
+            <h3>Amazon Clone</h3>
+            <div class="project-content">
+                <img src="/Projects/amazon1.png" alt="Amazon Clone Screenshot" class="project-img">
+                <img src="/Projects/amazon2.png" alt="Amazon Clone Screenshot" class="project-img">
+                <img src="/Projects/amazon3.png" alt="Amazon Clone Screenshot" class="project-img">
+                <div class="project-description">
+                    <p>This is a clone of the Amazon website built using HTML and CSS. It includes a functional home page, product listing pages, and a basic shopping cart interface. This project helped me understand the basics of web design and development, particularly in structuring layouts and styling elements to resemble a popular e-commerce platform.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Project 2: BMI Calculator -->
+        <div class="project">
+            <h3>BMI Calculator</h3>
+            <div class="project-content">
+                <img src="/Projects/ht1.png" alt="BMI Calculator Screenshot" class="project-img">
+                <img src="/Projects/ht2.png" alt="BMI Calculator Screenshot" class="project-img">
+                <img src="/Projects/ht3.png" alt="BMI Calculator Screenshot" class="project-img">
+                <div class="project-description">
+                    <p>This BMI Calculator was built to not only calculate Body Mass Index but also to provide guidelines on healthy BMI ranges, maintenance calorie calculations, and tips for weight gain and weight loss. The project was a great way to integrate JavaScript with HTML and CSS to create an interactive and informative tool.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2 class="bg-color">Contact Me</h2>
+        <form id="contact-form" action="send-email.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

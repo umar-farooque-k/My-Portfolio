@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #283D4B;
+    color: #fff;
+    background-image: url('background-image.jpg'); /* Superhero-themed background */
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-color{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Full-screen avatar styles */
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#full-screen-avatar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#avatar-img {
+    width: 300px; /* Increased size */
+    height: auto;
+    transition: width 0.5s ease-in-out;
+}
+
+#avatar-text {
+    margin-top: 20px;
+    font-size: 1.5em; /* Initial full-screen text size */
+    text-align: center;
+    transition: font-size 0.5s ease-in-out;
+}
+
+/* After scrolling */
+.shrink #full-screen-avatar {
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 10px;
+    left: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a background to differentiate */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.shrink #avatar-img {
+    width: 90px; /* Smaller size */
+}
+
+.shrink #avatar-text {
+    font-size: 1em; /* Smaller text */
+    margin-left: 10px;
+    max-width: 300px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #ff0000; /* Superhero color */
+}
+
+/* Adjust padding for sections to shorten their length */
+section {
+    padding: 30px 20px; /* Reduced padding for a shorter section */
+    min-height: 60vh; /* Reduced minimum height */
+    text-align: center;
+    padding-top: 80px; /* Ensure content is not hidden behind the fixed nav */
+}
+
+/* Specific styles for the home section */
+#home {
+    padding: 0; /* No padding for a minimal section */
+    min-height: 100vh; /* Full height to cover the viewport */
+}
+
+/* Hide the home section content initially */
+#home h1, #home p {
+    display: none;
+}
+/* Container for typing effect */
+.typing-container {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust as needed to position from the right edge */
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+/* Line 1 styling */
+.typing-line1 {
+    font-size: 3em; /* Adjust font size as needed */
+    color: #fff; /* White color for the first line */
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Line 2 styling */
+.typing-line2 {
+    font-size: 3.5em; /* Adjust font size as needed */
+    color: #ff0000; /* Red color for the second line */
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Typing cursor styling */
+.typing-cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: #fff; /* White cursor color to match text */
+    animation: blink 1s step-end infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #fff; /* White cursor color */
+    }
+}
+/* Specific styles for the about section */
+#about {
+    padding: 20px 20px; /* Adjust padding specifically for the about section */
+}
+
+#about p {
+    font-size: 1.1em; /* Adjust font size for the about text */
+}
+
+/* Add styles for the social links and logos */
+#social-links {
+    margin-top: 20px;
+}
+
+#social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Avatar Section */
+#avatar {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+#avatar-img {
+    width: 300px; /* Increased size */
+    height: auto;
+    transition: width 0.5s ease-in-out;
+}
+
+#avatar-text {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    max-width: 300px;
+}
+
+/* Projects Section */
+#projects .project {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-img {
+    width: 48%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+    max-height: 300px; /* Limit the image height */
+}
+
+.project-description {
+    width: 100%;
+    margin-top: 20px;
+    color: #ccc;
+    text-align: left;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-img, .project-description {
+        width: 100%;
+    }
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000; /* Superhero color */
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4d4d;
+}
