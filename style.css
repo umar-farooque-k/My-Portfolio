@@ -153,56 +153,21 @@ html {
 .highlight {
   color: #f4a261;
 }
-
-.btns {
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-  margin-top: 2vh;
-}
-
 .button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 32px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background-color: #2d2d2d;
-  border: none;
-  border-radius: 8px;
+  width: 15vw;
+  height: 8vh;
+  background: transparent;
+  font-size: 3vh;
+  border: 2px solid black;
   cursor: pointer;
-  overflow: hidden;
-  width: 12vw;
-  height: 10vh;
-  min-width: 120px;
-  transition: background 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 4vw;
 }
 
-.button::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: #f4a261;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s ease-out, height 0.4s ease-out;
+.button:active {
+  transform: scale(0.95);
 }
 
-.button:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.button span {
-  position: relative;
-  z-index: 1;
-}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -215,18 +180,16 @@ html {
   }
   
   .btns {
+    display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 3vh;
   }
   
   .button {
-    width: 50%;
+    width: 80%;
   }
 }
 
-.menu-open .btns {
-  display: none; /* Hides the buttons when the menu is open */
-}
 
 #about {
   display: flex;
@@ -263,8 +226,7 @@ html {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   #about {
-    width: 80vw;
-    margin-left: 10vw;
+    width: 75vw;
   }
 
   .big {
@@ -431,14 +393,16 @@ html {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .project-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Ensures proper centering */
   }
 
   .project-card {
-      width: 80%;
+    width: 75%; /* Slightly reduce width for better spacing */
   }
 }
+
 
 #contact {
   margin-top: 9vh;
