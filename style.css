@@ -39,6 +39,10 @@ html {
   text-underline-offset: 1rem;
 }
 
+.dark-mode .nav-links a{
+  color: white;
+}
+
 .hamburger-nav {
   display: none;
 }
@@ -131,6 +135,11 @@ html {
   color: black;
   margin-left: 5vw;
 }
+
+.dark-mode #hero-section{
+  color: white;
+}
+
 
 #hero-section h2 {
   font-size: 12vh; /* Reduced size for better balance */
@@ -231,6 +240,9 @@ html {
   max-width: 800px; /* Restrict width for better readability */
 }
 
+.dark-mode #about{
+  color: white;
+}
 .big {
   font-size: 6vh;
   font-weight: bold;
@@ -276,6 +288,10 @@ html {
   margin-top: 9vh;
   color: black;
   margin-left: 5vw;
+}
+
+.dark-mode #projects{
+  color: white;
 }
 
 #projects h2 {
@@ -426,6 +442,7 @@ html {
 
 #contact {
   margin-top: 9vh;
+  margin-bottom: 3vh;
 }
 
 .links {
@@ -459,7 +476,7 @@ html {
 
 /* Dark mode styles */
 body.dark-mode {
-  background: linear-gradient(to bottom, #1E3A5F, #2C2F33);
+  background: linear-gradient(to bottom, #1E3A5F, #5384c4);
   color: #FFFFFF;
 }
 
@@ -467,3 +484,16 @@ body.dark-mode {
   background: gray;
   color: white;
 }
+
+.dark-mode .links a img {
+  filter: invert(1);
+}
+
+.dark-mode .hamburger-icon {
+  filter: invert(1);
+}
+
+.dark-mode #dark-mode-toggle img {
+  filter: invert(1); /* Turns black to white */
+}
+
